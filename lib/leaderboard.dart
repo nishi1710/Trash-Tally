@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 
 //import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import './land.dart';
 
 class LeaderboardPage extends StatefulWidget {
   @override
@@ -131,6 +132,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
           ],
         ),
       ),
+      bottomNavigationBar: FooterWidget(),
     );
   }
 
@@ -172,5 +174,6 @@ void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: LeaderboardPage(),
+    
   ));
 }

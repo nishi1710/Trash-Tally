@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './land.dart';
 
 class ScanWidget extends StatefulWidget {
   const ScanWidget({Key? key});
@@ -24,31 +25,33 @@ class _ScanWidgetState extends State<ScanWidget> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CardWidget(color: Colors.yellow),
+                CardWidget(color: Colors.yellow, category: 'Brown Glass'),
                 SizedBox(width: 20),
-                CardWidget(color: Colors.red),
+                CardWidget(color: Colors.red, category: 'Shoes & Trash'),
               ],
             ),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CardWidget(color: Colors.blue),
+                CardWidget(color: Colors.blue, category: 'Battery & Metal'),
                 SizedBox(width: 20),
-                CardWidget(color: Colors.green),
+                CardWidget(color: Colors.green, category: 'Biological & Clothes'),
               ],
             ),
           ],
         ),
       ),
+      bottomNavigationBar: FooterWidget(),
     );
   }
 }
 
 class CardWidget extends StatelessWidget {
   final Color color;
+  final String category;
 
-  const CardWidget({Key? key, required this.color}) : super(key: key);
+  const CardWidget({Key? key, required this.color, required this.category}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -61,8 +64,9 @@ class CardWidget extends StatelessWidget {
         height: 150,
         child: Center(
           child: Text(
-            color.toString(),
+            category,
             style: TextStyle(color: Colors.white, fontSize: 18),
+            textAlign: TextAlign.center,
           ),
         ),
       ),
