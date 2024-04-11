@@ -1,0 +1,11 @@
+battery - 
+biological - green
+cardboad - blue
+clothes - blue
+green-glass - 
+metal - yellow
+paper - blue
+plastic - red
+shoes - 
+trash - 
+white-glass - 
