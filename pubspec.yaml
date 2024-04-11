@@ -79,6 +79,7 @@ flutter:
     - assets/images/team1.jpg
     - assets/images/team2.jpg
     - assets/images/team3.jpg
+    - assets/images/homeimage.png
   #   - images/a_dot_ham.jpeg
 
   # fonts:
